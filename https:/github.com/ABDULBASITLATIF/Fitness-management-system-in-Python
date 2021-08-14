@@ -1,0 +1,89 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+def take(t):
+    if t==1:
+        fe = int(input("Enter 1 for food and 2 for exercise :"))
+        if fe==1:
+            val = input("enter your details here: ")
+            with open("harry-fo.txt","a") as f:
+                f.write(str(str([getdate()]))+":"+ val + "\n")
+                print("information added\n")
+        elif fe==2:
+            val = input("enter your details here: ")
+            with open("harry-ex.txt","a") as f:
+                f.write(str(str([getdate()]))+":"+ val + "\n")
+                print("information added\n")
+    elif t==2:
+        fe = int(input("Enter 1 for food and 2 for exercise :"))
+        if fe==1:
+            val = input("enter your details here: ")
+            with open("rohan-fo.txt","a") as f:
+                f.write(str(str([getdate()]))+":"+ val + "\n")
+                print("information added\n")
+        elif fe==2:
+            val = input("enter your details here:")
+            with open("rohan-ex.txt","a") as f:
+                f.write(str(str([getdate()]))+":"+ val + "\n")
+                print("information added\n")
+    elif t==3:
+        fe = int(input("Enter 1 for food and 2 for exercise :"))
+        if fe==1:
+            val = input("enter your details here: ")
+            with open("hammad-fo.txt","a") as f:
+                f.write(str(str([getdate()]))+":"+ val + "\n")
+                print("information added\n")
+        elif fe==2:
+            val = input("enter your details here: ")
+            with open("hammad-ex.txt","a") as f:
+                f.write(str(str([getdate()]))+":"+ val + "\n")
+                print("information added\n")
+    else:
+        print("please enter valid number 1 for harry 2 for rohan and 3 for hammad!\n")
+def retrieve(k):
+    if k==1:
+        fe = int(input("Enter 1 for food and 2 for exercise to reterive :"))
+        if fe==1:
+            f = open("harry-fo.txt")
+            for i in f:
+                print(i,end="")
+            f.close()
+        elif fe==2:
+            f = open("harry-ex.txt")
+            for i in f:
+                print(i,end="")
+            f.close()
+    elif k==2:
+        fe = int(input("Enter 1 for food and 2 for exercise to reterive :"))
+        if fe==1:
+            f = open("rohan-fo.txt")
+            for i in f:
+                print(i,end="")
+            f.close()
+        elif fe==2:
+            f = open("rohan-ex.txt")
+            for i in f:
+                print(i,end="")
+            f.close()
+    elif k==3:
+        fe = int(input("Enter 1 for food and 2 for exercise to reterive :"))
+        if fe==1:
+            f = open("hammad-fo.txt")
+            for i in f:
+                print(i,end="")
+            f.close()
+        elif fe==2:
+            f = open("hammad-ex.txt")
+            for i in f:
+                print(i,end="")
+            f.close()
+        else:
+            print("please enter valid number, 1 for harry 2 for rohan and 3 for hammad!\n")
+print("FITNESS MANAGEMANT SYSTEM\n")            
+a = int(input("Enter 1 to log the value  and 2 to reterive the value :"))
+if a==1:
+    k = int(input("press 1 for harry 2 for rohan 3 for hammad :"))
+    take(k)
+elif a==2:
+    k = int(input("press 1 for harry 2 for rohan 3 for hammad :"))
+    retrieve(k)
